@@ -1,0 +1,30 @@
+# Tristan Sturgess
+
+> Software engineer based in Vancouver, BC. Background in electrical engineering (B.Eng. Electrical Engineering, University of Victoria); work spans large-scale distributed systems (Amazon Web Services, S3) and production applied AI and RAG systems.
+
+- Role: Senior Software Engineer
+- Location: Vancouver, BC
+- LinkedIn: https://www.linkedin.com/in/tristansturgess
+
+## Site
+- [Home](https://tristansturgess.com/): single-page portfolio
+- [Full text](https://tristansturgess.com/llms-full.txt): all site content in one file
+
+## Experience
+- Unblocked — Software Engineer (Sep 2025 – Apr 2026): Enterprise RAG over live SaaS integrations
+- Cornerstone Planning Group — AI Product Engineer (Consulting) (Jan 2025 – Aug 2025): Solo engineer building a custom retrieval system over disorganized historical documents
+- MDA Space — Senior Software Developer (Dec 2023 – Aug 2025): Led a team of engineers and domain experts working on C++ enhancements for satellite ground-segment systems
+- Amazon Web Services — Software Development Engineer, S3 (Jul 2021 – Nov 2023): Designed high-throughput systems on native AWS infrastructure
+- ACD Systems — Software Developer (May 2014 – Jun 2021): Developed multiple features for a real-time C++ photo editor
+
+## Selected work
+- [From AI Ambition to Useful Product](https://tristansturgess.com/work/from-ai-ambition-to-useful-product): Scoping a broad stakeholder goal into a focused first release
+- [Agent Workflow DSL](https://tristansturgess.com/work/agent-workflow-dsl): Token-efficient DSL to replace JSON queries and cut token usage in half
+- [S3 Cost Optimization](https://tristansturgess.com/work/s3-cost-optimization): Architectural redesign of a high-throughput AWS S3 service
+
+## Sections
+- Intro
+- Featured Work
+- Experience
+- About
+- Contact

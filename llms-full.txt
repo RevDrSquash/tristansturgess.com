@@ -1,0 +1,174 @@
+# Tristan Sturgess
+
+- Role: Senior Software Engineer
+- Location: Vancouver, BC
+- Education: B.Eng. Electrical Engineering, University of Victoria
+- LinkedIn: https://www.linkedin.com/in/tristansturgess
+
+## Positioning
+
+Building reliable AI workflows and scalable distributed systems.
+
+## About
+
+As an engineer, my favourite thing is understanding systems well enough to make them do what I want. That pulled me from electrical engineering to distributed systems and all the way to space. Now I use my understanding of scalable backend engineering to build high-quality AI systems.
+
+Core technologies: Python, Kotlin, Java, C++, PostgreSQL, AWS, Docker, Kubernetes, LLMs, RAG, pgvector.
+
+## Experience
+
+### Unblocked — Software Engineer
+Sep 2025 – Apr 2026
+Enterprise RAG over live SaaS integrations
+Technologies: Kotlin, Python, LLMs, MCP, PostgreSQL.
+
+### Cornerstone Planning Group — AI Product Engineer (Consulting)
+Jan 2025 – Aug 2025
+Solo engineer building a custom retrieval system over disorganized historical documents
+Technologies: Python, OpenAI, pgvector, Cohere Rerank, Celery.
+
+### MDA Space — Senior Software Developer
+Dec 2023 – Aug 2025
+Led a team of engineers and domain experts working on C++ enhancements for satellite ground-segment systems
+Technologies: C++, Python, Docker, GitLab CI.
+
+### Amazon Web Services — Software Development Engineer, S3
+Jul 2021 – Nov 2023
+Designed high-throughput systems on native AWS infrastructure
+Technologies: Java, Distributed Systems, Kinesis, IAM.
+
+### ACD Systems — Software Developer
+May 2014 – Jun 2021
+Developed multiple features for a real-time C++ photo editor
+Technologies: C++, Direct2D, DirectX11, HLSL.
+
+## Selected work
+
+### From AI Ambition to Useful Product
+Scoping a broad stakeholder goal into a focused first release
+Technologies: Python, pgvector, Hybrid Search.
+
+# Turning Proposal Automation Into a Project-Aware AI Search System
+
+Worked with stakeholders from a planning and consulting firm to turn a broad proposal-automation idea into a production AI retrieval system for finding and reusing past project knowledge.
+
+**My role:** I was the sole engineer and customer-facing technical lead, responsible for discovery, scoping, architecture, implementation, stakeholder demos, user updates, and iterative delivery.
+
+## Results
+
+I delivered an internal AI assistant that made the client’s historical project archive easier to search and reuse.
+
+* Built a production AI assistant for querying the client’s document library in natural language.
+* Cut the time spent writing proposals in half, based on stakeholder feedback.
+* Reduced reliance on senior staff for tribal knowledge.
+* Used stakeholder demos, update emails, and observed failure cases to guide the roadmap.
+
+## Proposal automation was too broad to build first
+
+The client’s original goal was fulling automating proposal writing but this combined several different problems: 
+* understanding proposal structure
+* finding past work
+* selecting relevant examples
+* generating polished content
+
+I recognized that trying to automate the full workflow immediately would create unecesary risk and delay value to the client. Instead I proposed narrowing the first phase to something that:
+* was small enough to build quickly
+* addressed a significant pain point
+* made progress towards the original goal
+
+Full proposal automation was the exciting version of the project, but it was too broad to build all at once. I wanted the client to get value sooner, while still moving towards their ultimate goal.
+
+## Search created value before automation
+
+* Interviewed stakeholders and reviewed past proposals to understand where AI could fit into the workflow.
+* Identified a concrete pain point: finding relevant past projects was slow and important.
+* Chose search because it was useful on its own and necessary for future proposal generation.
+* Scoped the first system around an AI assistant with a centralized file store and natural-language search.
+* Used that first deliverable to create a practical path from knowledge retrieval toward deeper automation.
+
+Search became the right first wedge because it solved an immediate problem without requiring the entire proposal-writing process to be automated. It gave users faster access to the historical material they already relied on, while creating the knowledge layer future automation would need.
+
+
+## Users asked about projects, not documents
+
+While reviewing the client's feedback and usage I identified an implicit requirement that users had not asked for directly: a project model.
+
+Users often asked questions like:
+* “Which projects involved RCMP facilities?”
+* “Which projects included test fits?”
+
+The system handled these quetions poorly because it did not understand projects as entities.
+
+This was a major product insight: the client's work required tribal knowledge that was implicit in the structure surounding the documents but not captured in them directly. 
+
+For the system to be useful I had to make this implicit knowledge visible to the agent.
+
+## Feedback turned failures into the roadmap
+
+I reviewed stakeholder testing to identify issues such as:
+
+* Work from external contractors was misattributed as work completed by the client.
+* Relevant projects were excluded because standard retrieval only returned the top matches.
+* The assistant answered questions about one project using documents from another.
+* Project context was often misattributed because projects often referenced each other.
+
+I translated those failures into a roadmap: better search, better context awareness, and dedicated list-query support. The project improved through repeated feedback rather than a fixed initial specification.
+
+
+## Project context became the real product
+
+The architecture changed because the product requirement became clearer: the assistant needed to reason over the client’s project history, not just retrieve text. That prompted me to make several changes:
+
+* Added project metadata such as client, location, personnel, and dates.
+* Added query expansion and project-field search.
+* Built a project-topic lookup tool that grouped evidence by project, filtered weak matches, and summarized relevant results.
+* Used evaluations to tune the system and improve chunk quality, recall, precision, and relevance over time.
+
+The hard part was not simply connecting an LLM to a set of documents. The hard part was exposing enough of the project context around those documents for the assistant to answer the kinds of questions stakeholders actually asked.
+
+## Lessons Learned
+
+This project reinforced that the most important AI requirements are often implicit. The client asked for proposal automation, but real usage showed that the first hard problem was project-level understanding: connecting documents, snippets, metadata, and prior work into something the assistant could reason about.
+
+### Agent Workflow DSL
+Token-efficient DSL to replace JSON queries and cut token usage in half
+Technologies: Kotlin, LLMs, Agents.
+
+# Designing a Custom DSL to Cut Agent Token Usage and Latency by 50%
+
+Identified token inefficiencies in the platform's agent workflows and designed a custom domain-specific language to replace JSON-based query generation, cutting per-step latency by roughly 50%.
+
+**My role:** I diagnosed where the agent loop was spending tokens, designed the DSL and its execution model, and built it into the production agent workflow on a developer platform serving ~100k requests/day over a ~6M-document corpus.
+
+## Results
+
+I made the agent cheaper and faster at every step by changing the language it used to express queries, not just the model behind it.
+
+* Replaced verbose JSON query generation with a purpose-built DSL, cutting output tokens by ~50%.
+* Reduced minimum per-step latency from 4s to 2s, compounding across multi-step workflows.
+* Grounded the design in a concrete understanding of how token overhead accumulates inside an agent loop, rather than treating the LLM as a black box.
+* Delivered the change in production on an agentic system operating at ~100k requests/day.
+
+### S3 Cost Optimization
+Architectural redesign of a high-throughput AWS S3 service
+Technologies: Java, AWS, Distributed Systems.
+
+# Re-Architecting a Service to Cut Memory 60% and Operating Cost 70%
+
+Proactively identified and reworked memory-bound architecture, cutting the service's memory footprint 60% and its operating cost 70% while carrying the same production load at scale.
+
+**My role:** As a Software Development Engineer on the S3 team, I identified the architectural issue, led the redesign, and drove it through review and rollout. I owned the project from root-cause analysis through implementation, operational validation, and documentation.
+
+## Results
+
+I removed a structural bottleneck that was forcing the service onto oversized, expensive hosts, and let it run the same workload on cheaper instances.
+
+* Reduced the service's memory usage by 60% through an architectural redesign.
+* Cut operating costs by 70% by enabling cheaper host instances at the same production load.
+* Delivered the change on a system serving millions of event notifications per second, with no regression in reliability.
+
+## Contact
+
+If you've got an interesting engineering or applied AI role you think I'd be a good fit for, send me a message on LinkedIn.
+
+LinkedIn: https://www.linkedin.com/in/tristansturgess

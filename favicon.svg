@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TS monogram">
+  <rect width="64" height="64" rx="12" fill="#10140f" />
+  <rect x="2.5" y="2.5" width="59" height="59" rx="10" fill="none" stroke="#3a4234" stroke-width="1.5" />
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="500"
+        letter-spacing="1" fill="#c2d79a">TS</text>
+</svg>
